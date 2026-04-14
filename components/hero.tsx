@@ -86,9 +86,9 @@ export function Hero() {
           <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
             Suryaansh
             <br />
-            <span className="italic">Sharma</span>
+            <span className="italic text-primary">Sharma</span>
           </h1>
-          <p className="font-mono text-xs tracking-[0.3em] text-purple-400 mt-4">Software Engineer & AI Specialist</p>
+          <p className="font-mono text-xs tracking-[0.3em] text-accent mt-4">Software Engineer & AI Specialist</p>
         </motion.div>
 
         {/* Center - Typing Animation */}
@@ -98,9 +98,9 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-full px-8 max-w-2xl"
         >
-          <p className="font-sans text-2xl md:text-4xl text-center text-white/90 h-24 flex items-center justify-center">
+          <p className="font-sans text-2xl md:text-4xl text-center text-foreground h-24 flex items-center justify-center">
             {displayedText}
-            <span className="animate-pulse">|</span>
+            <span className="animate-pulse text-primary">|</span>
           </p>
         </motion.div>
 
@@ -117,7 +117,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection("projects")}
-              className="px-8 py-4 border border-purple-400/50 rounded-full font-mono text-sm tracking-widest uppercase bg-purple-500/10 hover:bg-purple-500/20 transition-colors duration-500"
+              className="px-8 py-4 border border-accent/50 rounded-full font-mono text-sm tracking-widest uppercase bg-accent/10 hover:bg-accent/20 transition-colors duration-500"
             >
               View Projects
             </motion.button>
@@ -126,7 +126,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection("contact")}
-              className="px-8 py-4 border border-pink-400/50 rounded-full font-mono text-sm tracking-widest uppercase bg-pink-500/10 hover:bg-pink-500/20 transition-colors duration-500"
+              className="px-8 py-4 border border-primary/50 rounded-full font-mono text-sm tracking-widest uppercase bg-primary/10 hover:bg-primary/20 transition-colors duration-500"
             >
               Contact Me
             </motion.button>
@@ -139,7 +139,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               data-cursor-hover
-              className="text-muted-foreground hover:text-purple-400 transition-colors duration-300"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -148,14 +148,14 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               data-cursor-hover
-              className="text-muted-foreground hover:text-pink-400 transition-colors duration-300"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="mailto:suryaansh958@gmail.com"
               data-cursor-hover
-              className="text-muted-foreground hover:text-white transition-colors duration-300"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               <Mail className="w-5 h-5" />
             </a>
@@ -176,7 +176,7 @@ export function Hero() {
           className="flex flex-col items-center gap-2"
         >
           <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent" />
+          <div className="w-px h-8 bg-gradient-to-b from-foreground/50 to-transparent" />
         </motion.div>
       </motion.div>
     </section>
