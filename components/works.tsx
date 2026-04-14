@@ -44,6 +44,7 @@ const projects = [
     description: "Fraud detection system using Z-score, CUSUM, and surge analysis for anomaly detection in P2P transactions",
     category: "AI & ML",
     tech: ["Python", "Time-Series Analysis", "Anomaly Detection", "FinTech AI"],
+    image: "/projects/aiFinancial.png",
   },
   {
     id: 6,
@@ -51,6 +52,7 @@ const projects = [
     description: "Research project analyzing bias in emotion recognition models across neurotypical and autistic individuals",
     category: "AI & ML",
     tech: ["Computer Vision", "NLP", "Model Evaluation", "Bias Analysis"],
+    image: "/projects/thermalimaging.png",
   },
   {
     id: 7,
@@ -67,6 +69,7 @@ const projects = [
     description: "AI-powered biological sequence analysis using DNABERT and LLM-based interpretation",
     category: "AI & ML",
     tech: ["DNABERT", "LLM", "Bioinformatics", "AI"],
+    image: "/projects/nuclear.png",
     repo: "https://github.com/suryaansh001/Vax_intelli_bio.git",
   },
   {
@@ -89,6 +92,7 @@ const projects = [
     description: "Automated attendance using object detection, pose estimation, and face recognition",
     category: "Web Development",
     tech: ["YOLO", "CNN", "OpenCV", "Face Recognition"],
+    image: "/projects/attendance.png",
     repo: "https://github.com/suryaansh001/Attendance-system",
   },
   {
@@ -104,6 +108,7 @@ const projects = [
     description: "Chrome extension with keyword highlighting and AI-based summarization",
     category: "Web Development",
     tech: ["JavaScript", "Chrome Extension", "AI Summarization"],
+    image: "/projects/chromeextrnsion.png",
     repo: "https://github.com/suryaansh001/Highlighter_summarizer/tree/master",
   },
   {
@@ -112,6 +117,7 @@ const projects = [
     description: "Secure event management system with QR-based authentication and backend validation",
     category: "Web Development",
     tech: ["Streamlit", "JWT", "MySQL", "Python"],
+    image: "/projects/qrcodeAttendacne.webp",
     demo: "https://qr-code-ticketing-system.streamlit.app",
     repo: "https://github.com/suryaansh001/qr_code_ticketing",
   },
@@ -173,7 +179,7 @@ export function Works() {
           >
             {/* Image */}
             {project.image && (
-              <div className="mb-4 h-40 rounded overflow-hidden relative">
+              <div className="mb-4 h-52 rounded overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
