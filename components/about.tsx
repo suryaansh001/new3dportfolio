@@ -133,16 +133,33 @@ export function About() {
       </div>
 
       {/* Windmill Animation */}
-      <div id="pin-windmill-wrap" className="absolute right-4 top-0 h-full w-32 flex items-start justify-center">
+      {/* Windmill Animation */}
+      <div id="pin-windmill-wrap" className="absolute right-4 top-0 h-full w-32 flex items-start justify-center pointer-events-none">
         <div id="pin-windmill" className="absolute top-0">
-          <svg id="pin-windmill-svg" viewBox="0 0 100 100" className="w-32 h-32 text-purple-400">
-            <circle cx="50" cy="50" r="3" fill="currentColor" />
-            <g>
-              <rect x="47" y="10" width="6" height="35" fill="currentColor" transform="rotate(0 50 50)" />
-              <rect x="47" y="10" width="6" height="35" fill="currentColor" transform="rotate(90 50 50)" />
-              <rect x="47" y="10" width="6" height="35" fill="currentColor" transform="rotate(180 50 50)" />
-              <rect x="47" y="10" width="6" height="35" fill="currentColor" transform="rotate(270 50 50)" />
+          <svg 
+            id="pin-windmill-svg" 
+            viewBox="0 0 100 100" 
+            className="w-32 h-32"
+          >
+            <defs>
+              <linearGradient id="flower-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#A855F7" /> {/* Purple-500 */}
+                <stop offset="100%" stopColor="#2DD4BF" /> {/* Teal-400 */}
+              </linearGradient>
+            </defs>
+            
+            <g fill="url(#flower-gradient)">
+              {/* Individual Petal Path (duplicated and rotated) */}
+              {[0, 90, 180, 270].map((rotation) => (
+                <path
+                  key={rotation}
+                  d="M50 50 Q50 20 20 20 L20 40 Q40 40 50 50"
+                  transform={`rotate(${rotation} 50 50)`}
+                />
+              ))}
             </g>
+            {/* Center Hub */}
+            <circle cx="50" cy="50" r="2" fill="white" opacity="0.5" />
           </svg>
         </div>
       </div>

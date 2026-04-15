@@ -131,15 +131,82 @@ function Sphere() {
 
 export function SentientSphere() {
   const [mounted, setMounted] = useState(false)
+  const [hasError, setHasError] = useState(false)
+  const [webglSupported, setWebglSupported] = useState(true)
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return
+
+    // Check WebGL support
+    const checkWebGL = () => {
+      try {
+        const canvas = document.createElement('canvas')
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
+        if (!gl) {
+          setWebglSupported(false)
+          setHasError(true)
+          return false
+        }
+        return true
+      } catch (e) {
+        setWebglSupported(false)
+        setHasError(true)
+        return false
+      }
+    }
+
+    if (!checkWebGL()) {
+      console.warn('WebGL not supported, using fallback')
+      return
+    }
+
     setMounted(true)
+
+    // Handle WebGL context loss
+    const handleContextLoss = (event: Event) => {
+      event.preventDefault()
+      setHasError(true)
+      console.warn('WebGL context lost, falling back to static display')
+    }
+
+    const handleContextRestore = () => {
+      setHasError(false)
+      console.log('WebGL context restored')
+    }
+
+    // Add event listeners after a short delay to ensure canvas exists
+    const timeoutId = setTimeout(() => {
+      const canvas = document.querySelector('canvas')
+      if (canvas) {
+        canvas.addEventListener('webglcontextlost', handleContextLoss)
+        canvas.addEventListener('webglcontextrestored', handleContextRestore)
+      }
+    }, 1000)
+
+    return () => {
+      clearTimeout(timeoutId)
+      const canvas = document.querySelector('canvas')
+      if (canvas) {
+        canvas.removeEventListener('webglcontextlost', handleContextLoss)
+        canvas.removeEventListener('webglcontextrestored', handleContextRestore)
+      }
+    }
   }, [])
 
-  if (!mounted) {
+  if (!mounted || hasError || !webglSupported) {
     return (
       <div className="w-full h-full flex items-center justify-center">
-        <div className="w-64 h-64 rounded-full border border-white/10 animate-pulse" />
+        <div className="relative">
+          <div className="w-64 h-64 rounded-full border border-white/10 animate-pulse relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 animate-pulse" />
+            <div className="absolute inset-4 border border-white/5 rounded-full animate-spin" style={{animationDuration: '3s'}} />
+            <div className="absolute inset-8 border border-white/10 rounded-full animate-spin" style={{animationDuration: '2s', animationDirection: 'reverse'}} />
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-xs text-white/40 font-mono">3D</div>
+          </div>
+        </div>
       </div>
     )
   }
@@ -150,9 +217,30 @@ export function SentientSphere() {
       className="w-full my-0 h-full py-0"
       dpr={[1, 2]}
       gl={{
-        antialias: true,
+        antialias: false,
         alpha: true,
+        failIfMajorPerformanceCaveat: false,
+        powerPreference: "low-power",
+        stencil: false,
+        depth: true
       }}
+      onCreated={({ gl }) => {
+        // Optional: try to get context loss extension
+        try {
+          gl.getExtension('WEBGL_lose_context')
+        } catch (e) {
+          // Extension not available, continue
+        }
+      }}
+      onError={(error) => {
+        console.error('THREE.js error:', error)
+        setHasError(true)
+      }}
+      fallback={
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="text-white/50 text-sm">3D visualization unavailable</div>
+        </div>
+      }
     >
       <ambientLight intensity={0.5} />
       <Sphere />
