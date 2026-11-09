@@ -79,7 +79,7 @@ export function Footer() {
           {/* Links */}
           <div className="flex gap-8">
             {[
-              { label: "LinkedIn", href: "https://linkedin.com/in/suryaansh" },
+              { label: "LinkedIn", href: "https://www.linkedin.com/in/suryaansh-sharma-05a811284" },
               { label: "GitHub", href: "https://github.com/suryaansh001" },
               { label: "Email", href: "mailto:suryaansh958@gmail.com" },
             ].map((link) => (

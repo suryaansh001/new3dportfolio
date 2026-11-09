@@ -44,14 +44,6 @@ const experiences = [
     description: "Leading technical initiatives and coordinating activities",
     skills: ["Leadership", "Event Management", "Technical Coordination"],
   },
-  {
-    id: 6,
-    role: "Co-Chair, Competitive Programming Club",
-    company: "JK Lakshmipat University",
-    period: "2023 - 2024",
-    description: "Organized coding contests, mentored peers in algorithms",
-    skills: ["Competitive Programming", "Mentoring", "Algorithm Design"],
-  },
 ]
 
 export function Experience() {

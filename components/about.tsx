@@ -88,13 +88,13 @@ export function About() {
 
             <div className="space-y-4 text-sm leading-relaxed text-white/80">
               <p>
-                I&apos;m an AI developer and software engineer specializing in machine learning, computer vision, and full-stack web development. With expertise in Python, JavaScript, and modern frameworks, I create intelligent systems that solve real-world problems.
+                Computer Science student focused on AI application development, LLM integrations, backend systems, and intelligent automation — building custom agentic architectures, AI-powered applications, RAG systems, REST APIs, and real-time AI pipelines with Python, FastAPI, LLM APIs, and modern AI frameworks.
               </p>
               <p>
-                My journey spans from robotics internships to AI model development, where I&apos;ve built everything from healthcare prediction systems to humanoid robot integrations. I&apos;m passionate about combining cutting-edge AI with practical applications.
+                Hands-on experience spans AI internships at Racketail Solutions, robotics work on humanoid systems, and freelance web development — from multi-agent orchestration and local AI desktop assistants to computer-vision and physiological-signal ML pipelines.
               </p>
               <p>
-                Currently pursuing my BTech degree while gaining hands-on experience through internships and freelance projects. I&apos;m also the Co-Chair of the Competitive Programming Club at JKLU.
+                Currently pursuing my B.Tech at JK Lakshmipat University, Jaipur (2023 – Present), and previously served as a Python Teaching Assistant there.
               </p>
             </div>
 

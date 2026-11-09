@@ -33,8 +33,8 @@ export function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "suryaansh",
-      href: "https://linkedin.com/in/suryaansh",
+      value: "suryaansh-sharma-05a811284",
+      href: "https://www.linkedin.com/in/suryaansh-sharma-05a811284",
     },
     {
       icon: Github,
