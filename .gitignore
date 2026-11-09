@@ -25,3 +25,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# use pnpm only (Vercel detects pnpm-lock.yaml)
+package-lock.json
