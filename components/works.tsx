@@ -12,9 +12,9 @@ const projects = [
     description: "Comprehensive placement management system with role-based authentication, job applications, interview scheduling, and analytics dashboard",
     category: "Web Development",
     tech: ["Next.js", "Node.js", "PostgreSQL", "TypeScript", "JWT", "Tailwind CSS"],
-    image: "/projects/placementportal.webp",
+    image: "/projects/gen_00.png",
     demo: "https://placement-portal-g3c8.vercel.app/auth/login",
-    repo: "https://github.com",
+    repo: "https://github.com/suryaansh001?tab=repositories",
   },
   {
     id: 2,
@@ -22,6 +22,7 @@ const projects = [
     description: "End-to-end conversational system integrating STT, emotion detection, LLM reasoning, and TTS with persistent memory for contextual interactions",
     category: "AI & ML",
     tech: ["FastAPI", "LLM", "Speech-to-Text", "Text-to-Speech", "NLP"],
+    image: "/projects/gen_07.png",
   },
   {
     id: 3,
@@ -29,7 +30,7 @@ const projects = [
     description: "Hybrid object detection system integrating YOLO techniques into EfficientDet for improved real-time performance on LVIS dataset",
     category: "AI & ML",
     tech: ["EfficientDet", "YOLO", "Object Detection", "Computer Vision"],
-    image: "/projects/efficientDET.png",
+    image: "/projects/gen_01.png",
   },
   {
     id: 4,
@@ -37,6 +38,7 @@ const projects = [
     description: "Vision-language model using ViT + GPT2 for gaze-aware attention modeling and contextual scene understanding",
     category: "AI & ML",
     tech: ["Vision Transformer", "GPT2", "PyTorch", "Computer Vision", "NLP"],
+    image: "/projects/gen_02.png",
   },
   {
     id: 5,
@@ -44,6 +46,7 @@ const projects = [
     description: "Fraud detection system using Z-score, CUSUM, and surge analysis for anomaly detection in P2P transactions",
     category: "AI & ML",
     tech: ["Python", "Time-Series Analysis", "Anomaly Detection", "FinTech AI"],
+    image: "/projects/gen_08.png",
   },
   {
     id: 6,
@@ -51,6 +54,7 @@ const projects = [
     description: "Research project analyzing bias in emotion recognition models across neurotypical and autistic individuals",
     category: "AI & ML",
     tech: ["Computer Vision", "NLP", "Model Evaluation", "Bias Analysis"],
+    image: "/projects/gen_03.png",
   },
   {
     id: 7,
@@ -58,8 +62,8 @@ const projects = [
     description: "Advanced AI chatbot combining RAG with LLM and Knowledge Graphs for intelligent query processing",
     category: "AI & ML",
     tech: ["RAG", "LLM", "Knowledge Graphs", "Python"],
-    image: "/projects/knowledgegraph.png",
-    repo: "https://github.com/suryaansh001/Radiants_mosdac.git",
+    image: "/projects/gen_04.png",
+    repo: "https://github.com/suryaansh001?tab=repositories",
   },
   {
     id: 8,
@@ -67,7 +71,8 @@ const projects = [
     description: "AI-powered biological sequence analysis using DNABERT and LLM-based interpretation",
     category: "AI & ML",
     tech: ["DNABERT", "LLM", "Bioinformatics", "AI"],
-    repo: "https://github.com/suryaansh001/Vax_intelli_bio.git",
+    image: "/projects/gen_05.png",
+    repo: "https://github.com/suryaansh001?tab=repositories",
   },
   {
     id: 9,
@@ -75,6 +80,7 @@ const projects = [
     description: "Temporal modeling of joint-angle sequences using Bi-LSTM with attention for pose classification and segmentation",
     category: "AI & ML",
     tech: ["LSTM", "Attention", "Time-Series", "Deep Learning"],
+    image: "/projects/gen_06.png",
   },
   {
     id: 10,
@@ -82,6 +88,7 @@ const projects = [
     description: "Real-time object detection with voice narration for accessibility using CV and speech systems",
     category: "Robotics",
     tech: ["YOLO", "OpenCV", "TTS", "Computer Vision"],
+    image: "/projects/gen_10.png",
   },
   {
     id: 11,
@@ -89,7 +96,8 @@ const projects = [
     description: "Automated attendance using object detection, pose estimation, and face recognition",
     category: "Web Development",
     tech: ["YOLO", "CNN", "OpenCV", "Face Recognition"],
-    repo: "https://github.com/suryaansh001/Attendance-system",
+    image: "/projects/gen_11.png",
+    repo: "https://github.com/suryaansh001?tab=repositories",
   },
   {
     id: 12,
@@ -97,6 +105,7 @@ const projects = [
     description: "AI-powered robotic systems integrating perception, LLM-based interaction, and real-time control",
     category: "Robotics",
     tech: ["Raspberry Pi", "Arduino", "FastAPI", "Computer Vision", "LLM"],
+    image: "/projects/gen_09.png",
   },
   {
     id: 13,
@@ -104,7 +113,8 @@ const projects = [
     description: "Chrome extension with keyword highlighting and AI-based summarization",
     category: "Web Development",
     tech: ["JavaScript", "Chrome Extension", "AI Summarization"],
-    repo: "https://github.com/suryaansh001/Highlighter_summarizer/tree/master",
+    image: "/projects/gen_13.png",
+    repo: "https://github.com/suryaansh001?tab=repositories",
   },
   {
     id: 14,
@@ -112,8 +122,9 @@ const projects = [
     description: "Secure event management system with QR-based authentication and backend validation",
     category: "Web Development",
     tech: ["Streamlit", "JWT", "MySQL", "Python"],
+    image: "/projects/gen_12.png",
     demo: "https://qr-code-ticketing-system.streamlit.app",
-    repo: "https://github.com/suryaansh001/qr_code_ticketing",
+    repo: "https://github.com/suryaansh001?tab=repositories",
   },
 ]
 

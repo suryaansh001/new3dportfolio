@@ -144,7 +144,7 @@ export function Hero() {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/suryaansh"
+              href="https://www.linkedin.com/in/suryaansh-sharma-05a811284"
               target="_blank"
               rel="noopener noreferrer"
               data-cursor-hover
